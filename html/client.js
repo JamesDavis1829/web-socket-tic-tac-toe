@@ -21,6 +21,7 @@ $('#join_button').click(function(){
     id = $('#game_id_input').val()
     socket.emit('join_game', id)
     your_player = 2;
+    connected = false;
 })
 
 $('.tile').click(function(event){

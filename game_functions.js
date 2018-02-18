@@ -3,6 +3,7 @@ exports.check_game_board = function(game_board){
     let col = check_columns(game_board)
     let row = check_rows(game_board)
     let diagonal = check_diagonals(game_board)
+    let cat_game = is_cat(game_board)
 
     if(col){
         return col === 'x' ? 1 : 2
@@ -10,6 +11,8 @@ exports.check_game_board = function(game_board){
         return row === 'x' ? 1 : 2
     }else if(diagonal){
         return diagonal === 'x' ? 1 : 2
+    }else if(cat_game){
+        return 'Nobody';
     }else{
         return null;
     }
@@ -64,4 +67,16 @@ check_diagonals = function(game_board){
     }else{
         return null;
     }
+}
+
+is_cat = function(game_board){
+    for(keys in game_board){
+        if (keys !== 'player_turn'){
+            if(game_board[keys] === ''){
+                return false;
+            }
+        }
+    }
+
+    return true;
 }
