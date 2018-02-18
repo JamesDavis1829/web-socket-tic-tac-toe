@@ -1,0 +1,91 @@
+body{
+    font-family: Helvetica;
+}
+
+.header{
+    grid-column: span 3;
+    color: white;
+    background: black;
+    box-shadow: 0px 10px 5px grey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-id{
+    grid-column: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    box-shadow: 10px 10px 5px grey;
+    margin: 10px 10px 10px 10px;
+}
+
+.join{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.turn{
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-board{
+    grid-column: 2;
+    display : grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    width: 300px;
+    height: 300px;
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
+    background-color: black;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.controls{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    grid-column: 2;
+    align-items: center;
+    justify-content: center;
+}
+
+.tile{
+    display: flex;
+    border: 6px solid lightgrey;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 4em;
+    font-weight: bold;
+    font-family: Helvetica;
+    background: grey;
+}
+
+.header{
+    grid-column: span 3
+}
+
+.footer{
+    grid-column: span 3
+}
+
+.main-page{
+    height: 90vh;
+    display: grid;
+    grid-template-rows: 40px 70px 300px 70px;
+    grid-template-columns: 1fr 300px 1fr;
+    grid-column-gap: 6px;
+    grid-row-gap: 6px;
+}

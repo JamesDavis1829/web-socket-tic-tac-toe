@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <title>Tic Tac Toe Game</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+    <link rel="stylesheet" type="text/css" href="./client.css">
+<body class="main-page">
+    <div class="header">
+        <p>Web Socket Tic Tac Toe!</p>
+    </div>
+    <div class="game-id card">
+        <p>Game ID: <span id="game_id"></span></p>
+    </div>
+    <div class="turn card">
+        <p>Player <span id="player_number">1</span>'s Turn</p>
+    </div>
+    <div class="join card">
+        <input type="text" value="" id="game_id_input"/><button id='join_button'>Join Game</button>
+    </div>
+    <div class="game-board">
+        <div class="tile" id="t1"></div>
+        <div class="tile" id="t2"></div>
+        <div class="tile" id="t3"></div>
+        <div class="tile" id="t4"></div>
+        <div class="tile" id="t5"></div>
+        <div class="tile" id="t6"></div>
+        <div class="tile" id="t7"></div>
+        <div class="tile" id="t8"></div>
+        <div class="tile" id="t9"></div>
+    </div>
+    <div class="controls">
+        <button class="card" id="start_game">Start a New Game</button>
+    </div>
+    <div class="footer">
+    </div>
+
+    <script src="./client.js" type="text/javascript"></script>
+</body>
+</html> 
